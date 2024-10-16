@@ -10,6 +10,16 @@ function calculateStats() {
     let defensive = Math.floor(hp / 10) + def + Math.floor(atk / 10) + Math.floor(agi / 20);
     let durability = hp * 4 + def + atk + agi;
     let speed = agi;
+
+    // Display results
+    document.getElementById('atk').innerText = offensive;
+    document.getElementById('def').innerText = defensive;
+    document.getElementById('hp').innerText = durability;
+    document.getElementById('agi').innerText = speed;
+
+    //Points used
+    const points_used = hp + def + atk + agi;
+    document.getElementById('points_used').innerText = points_used;
     
     // Item HP
     const accHpLeft = parseInt(document.getElementById('accHpLeft').value) || 0;
@@ -65,17 +75,14 @@ function calculateStats() {
 
     
 
-    // Display results
-    document.getElementById('atk').innerText = offensive;
-    document.getElementById('def').innerText = defensive;
-    document.getElementById('hp').innerText = durability;
-    document.getElementById('agi').innerText = speed;
+
 
     // Display results
     document.getElementById('finalatk').innerText = offensive + itemAtk;
     document.getElementById('finaldef').innerText = defensive + itemDef;
     document.getElementById('finalhp').innerText = durability  + itemHp;
     document.getElementById('finalagi').innerText = speed + itemAgi;
+
 
 }
 
