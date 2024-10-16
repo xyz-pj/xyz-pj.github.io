@@ -79,28 +79,138 @@ function calculateStats() {
 
 }
 
-// 값을 안전하게 가져오기 위한 함수
-function getValue(id) {
-    return parseInt(document.getElementById(id).value) || 0;
+function saveData() {
+    // 저장 확인 메시지
+    const confirmation = confirm("저장 하시겠습니까?");
+    
+    if (confirmation) {
+        const data = {
+            hpPoint: document.getElementById('hpPoint').value,
+            defPoint: document.getElementById('defPoint').value,
+            atkPoint: document.getElementById('atkPoint').value,
+            agiPoint: document.getElementById('agiPoint').value,
+            accHpLeft: document.getElementById('accHpLeft').value,
+            headHp: document.getElementById('headHp').value,
+            accHpRight: document.getElementById('accHpRight').value,
+            wpnHp: document.getElementById('wpnHp').value,
+            amHp: document.getElementById('amHp').value,
+            axyHp: document.getElementById('axyHp').value,
+            handHp: document.getElementById('handHp').value,
+            footHp: document.getElementById('footHp').value,
+            emptyHp: document.getElementById('emptyHp').value,
+            accAtkLeft: document.getElementById('accAtkLeft').value,
+            headAtk: document.getElementById('headAtk').value,
+            accAtkRight: document.getElementById('accAtkRight').value,
+            wpnAtk: document.getElementById('wpnAtk').value,
+            amAtk: document.getElementById('amAtk').value,
+            axyAtk: document.getElementById('axyAtk').value,
+            handAtk: document.getElementById('handAtk').value,
+            footAtk: document.getElementById('footAtk').value,
+            emptyAtk: document.getElementById('emptyAtk').value,
+            accDefLeft: document.getElementById('accDefLeft').value,
+            headDef: document.getElementById('headDef').value,
+            accDefRight: document.getElementById('accDefRight').value,
+            wpnDef: document.getElementById('wpnDef').value,
+            amDef: document.getElementById('amDef').value,
+            axyDef: document.getElementById('axyDef').value,
+            handDef: document.getElementById('handDef').value,
+            footDef: document.getElementById('footDef').value,
+            emptyDef: document.getElementById('emptyDef').value,
+            accAgiLeft: document.getElementById('accAgiLeft').value,
+            headAgi: document.getElementById('headAgi').value,
+            accAgiRight: document.getElementById('accAgiRight').value,
+            wpnAgi: document.getElementById('wpnAgi').value,
+            amAgi: document.getElementById('amAgi').value,
+            axyAgi: document.getElementById('axyAgi').value,
+            handAgi: document.getElementById('handAgi').value,
+            footAgi: document.getElementById('footAgi').value,
+            emptyAgi: document.getElementById('emptyAgi').value,
+
+            accNameLeft: document.getElementById('accNameLeft').value,
+            headName: document.getElementById('headName').value,
+            accNameRight: document.getElementById('accNameRight').value,
+            awpnName: document.getElementById('awpnName').value,
+            amName: document.getElementById('amName').value,
+            axyName: document.getElementById('axyName').value,
+            handName: document.getElementById('handName').value,
+            footName: document.getElementById('footName').value,
+            emptyName: document.getElementById('emptyName').value,
+            emptyName: document.getElementById('emptyName').value
+
+
+        };
+
+        localStorage.setItem('statsData', JSON.stringify(data));
+        alert("저장 완료!");
+    } else {
+        alert("저장을 취소했습니다.");
+    }
 }
 
-function itemeStats() {
+function loadData() {
+    const confirmation = confirm("로드 하시겠습니까?");
+    
+    if (confirmation) {
+        const savedData = localStorage.getItem('statsData');
+        if (savedData) {
+            const data = JSON.parse(savedData);
+            
+            document.getElementById('hpPoint').value = data.hpPoint || 0;
+            document.getElementById('defPoint').value = data.defPoint || 0;
+            document.getElementById('atkPoint').value = data.atkPoint || 0;
+            document.getElementById('agiPoint').value = data.agiPoint || 0;
+            document.getElementById('accHpLeft').value = data.accHpLeft || 0;
+            document.getElementById('headHp').value = data.headHp || 0;
+            document.getElementById('accHpRight').value = data.accHpRight || 0;
+            document.getElementById('wpnHp').value = data.wpnHp || 0;
+            document.getElementById('amHp').value = data.amHp || 0;
+            document.getElementById('axyHp').value = data.axyHp || 0;
+            document.getElementById('handHp').value = data.handHp || 0;
+            document.getElementById('footHp').value = data.footHp || 0;
+            document.getElementById('emptyHp').value = data.emptyHp || 0;
+            document.getElementById('accAtkLeft').value = data.accAtkLeft || 0;
+            document.getElementById('headAtk').value = data.headAtk || 0;
+            document.getElementById('accAtkRight').value = data.accAtkRight || 0;
+            document.getElementById('wpnAtk').value = data.wpnAtk || 0;
+            document.getElementById('amAtk').value = data.amAtk || 0;
+            document.getElementById('axyAtk').value = data.axyAtk || 0;
+            document.getElementById('handAtk').value = data.handAtk || 0;
+            document.getElementById('footAtk').value = data.footAtk || 0;
+            document.getElementById('emptyAtk').value = data.emptyAtk || 0;
+            document.getElementById('accDefLeft').value = data.accDefLeft || 0;
+            document.getElementById('headDef').value = data.headDef || 0;
+            document.getElementById('accDefRight').value = data.accDefRight || 0;
+            document.getElementById('wpnDef').value = data.wpnDef || 0;
+            document.getElementById('amDef').value = data.amDef || 0;
+            document.getElementById('axyDef').value = data.axyDef || 0;
+            document.getElementById('handDef').value = data.handDef || 0;
+            document.getElementById('footDef').value = data.footDef || 0;
+            document.getElementById('emptyDef').value = data.emptyDef || 0;
+            document.getElementById('accAgiLeft').value = data.accAgiLeft || 0;
+            document.getElementById('headAgi').value = data.headAgi || 0;
+            document.getElementById('accAgiRight').value = data.accAgiRight || 0;
+            document.getElementById('wpnAgi').value = data.wpnAgi || 0;
+            document.getElementById('amAgi').value = data.amAgi || 0;
+            document.getElementById('axyAgi').value = data.axyAgi || 0;
+            document.getElementById('handAgi').value = data.handAgi || 0;
+            document.getElementById('footAgi').value = data.footAgi || 0;
+            document.getElementById('emptyAgi').value = data.emptyAgi || 0;
 
-    // 장비에서 추가되는 내구력 가져오기
-    const accHpLeft = getValue('accHpLeft');
-    const headHp = getValue('headHp');
-    const accHpRight = getValue('accHpRight');
-    const wpnAp = getValue('wpnAp');
-    const amHp = getValue('amHp');
-    const axyHp = getValue('axyHp');
-    const handHp = getValue('handHp');
-    const footHp = getValue('footHp');
-    const emptyHp = getValue('emptyHp');
+            document.getElementById('accNameLeft').value = data.accNameLeft || '장신구 1';
+            document.getElementById('headName').value = data.headName || '투구';
+            document.getElementById('accNameRight').value = data.accNameRight || '장신구 2';
+            document.getElementById('awpnName').value = data.awpnName || '무기';
+            document.getElementById('amName').value = data.amName || '방어구';
+            document.getElementById('axyName').value = data.axyName || '보조무기';
+            document.getElementById('handName').value = data.handName || '장갑';
+            document.getElementById('footName').value = data.footName || '신발';
+            document.getElementById('emptyName').value = data.emptyName || '비고';
 
-    // 최종 내구력 계산 (기본 내구력 + 각 장비 내구력)
-    const finalHp = baseHp + accHpLeft + headHp + accHpRight + wpnAp + amHp + axyHp + handHp + footHp + emptyHp;
-
-    // 최종 내구력 결과를 출력
-    document.getElementById('hp').textContent = finalHp;
+            alert("로드 완료!");
+        } else {
+            alert("저장 된 데이터가 없습니다.");
+        }
+    } else {
+        alert("로드를 취소했습니다.");
+    }
 }
-

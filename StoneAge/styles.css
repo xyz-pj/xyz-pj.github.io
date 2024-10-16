@@ -179,3 +179,18 @@ button:hover {
     opacity: 1;
     display: block;
 }
+
+.saveLode{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 24px;
+}
+.save{
+    background: #A1DF6E;
+    color: #000;
+}
+.save:hover{
+    background: #559520;
+}
