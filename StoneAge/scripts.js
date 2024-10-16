@@ -66,10 +66,16 @@ function calculateStats() {
     
 
     // Display results
-    document.getElementById('atk').innerText = offensive + itemAtk;
-    document.getElementById('def').innerText = defensive + itemDef;
-    document.getElementById('hp').innerText = durability  + itemHp;
-    document.getElementById('agi').innerText = speed + itemAgi;
+    document.getElementById('atk').innerText = offensive;
+    document.getElementById('def').innerText = defensive;
+    document.getElementById('hp').innerText = durability;
+    document.getElementById('agi').innerText = speed;
+
+    // Display results
+    document.getElementById('finalatk').innerText = offensive + itemAtk;
+    document.getElementById('finaldef').innerText = defensive + itemDef;
+    document.getElementById('finalhp').innerText = durability  + itemHp;
+    document.getElementById('finalagi').innerText = speed + itemAgi;
 
 }
 
@@ -97,3 +103,4 @@ function itemeStats() {
     // 최종 내구력 결과를 출력
     document.getElementById('hp').textContent = finalHp;
 }
+

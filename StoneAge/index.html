@@ -11,6 +11,64 @@
     <div class="main">
 
         <div class="status_box">
+            <div class="tooltip_box">
+                <img src="./img/tooltip.png" class="tooltip_mark">
+
+                <div class="tooltip  pull">
+                    <div>
+                        <span>체력:</span> <span>기본 1 스텟당 내구 4 / 10스텟당 공/방 +1씩</span>
+                        <div>
+                            <ol>
+                                <li>
+                                    캐릭에 유리한 주술에는 효율이 올라가고 해로운 주술에는 저항이 올라간다.<br>
+                                    <small>체력을 회복하는 고기나 은혜, 윤택등의 주술시에 체력이 높을수록 효율이 극대화</small>
+                                </li>
+                                <li>
+                                    모든 이상상태 공격이나 주술에 저항이 올라감
+                                </li>
+                                <li>
+                                    일반 공격시 크리티컬(방어력무시 최대 공격력적용)공격을 받을 확율 감소
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div>
+                        <span>건강:</span> <span>건강 1 내구 1 / 10스텟당 공 +1</span>
+                    </div>
+                    <div>
+                        <span>완력:</span> <span>완력 1 내구 1 / 10스텟당 방 +1</span>
+                        <div>
+                            <ol>
+                                <li>
+                                    적중율 증가<br>
+                                    <small>최소 대미지와 최대 대미지중 최대 확률 증가</small>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div>
+                        <span>순발력:</span> <span>순발력 1 내구 1 / 20스텟당 공/방 +1</span>
+                        <div>
+                            <ol>
+                                <li>
+                                    회피 방어증가<br>
+                                    <small>크리티컬 데미지 감소</small>
+                                </li>
+                                <li>
+                                    명중률 증가<br>
+                                    <small>정확도가 높아짐</small>
+                                </li>
+                                <li>
+                                    크리티컬 확률 증가
+                                </li>
+                                <li>
+                                    회피 확률 증가
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="box_title">
                 <h2>PLAYER STATUS</h2>
                 <h3>닉네임</h3>
@@ -22,23 +80,24 @@
                 <div>
                     <span>내구력:</span>
                     <span id="finalhp"></span>
-                    (<span id="hp"></span>)
+                    (<span class="statusNum" id="hp"></span>)
                 </div>
 
                 <div>
                     <span>공격력:</span>
                     <span id="finalatk"></span>
-                    (<span id="atk"></span>)
+                    (<span class="statusNum" id="atk"></span>)
                 </div>
                 <div>
                     <span>방어력:</span>
                     <span id="finaldef"></span>
-                    (<span id="def"></span>)
+                    (<span class="statusNum" id="def"></span>)
                 </div>
                 <div>
+
                     <span>순발력:</span>
                     <span id="finalagi"></span>
-                    (<span id="agi"></span>)
+                    (<span class="statusNum" id="agi"></span>)
                 </div>
 
             </div>

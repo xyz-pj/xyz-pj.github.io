@@ -66,6 +66,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 16px 0px;
 }
 .status_point_box{
     display: flex;
@@ -73,6 +74,8 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 16px;
+    padding: 16px 0px;
+    border-top: solid 2px #fff;
 }
 .status_point_box div div{
     display: flex;
@@ -124,4 +127,55 @@ button:hover {
 }
 .item_status div input{
     width: 52%;
+}
+.item_name{
+    text-align: center;
+}
+.tooltip_box{
+    position: absolute;
+}
+.tooltip_mark{
+    width: 30px;
+    filter: invert(100%);
+}
+.statusNum{
+    color: aquamarine;
+}
+.status_display{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+.status_display div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;
+}
+.pull {
+    background-color: #fff;
+}
+.pull:after {
+    content: "";
+    position: absolute;
+    top: 1.5%;
+    left: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid #fff;
+}
+
+.tooltip{
+    color: #000;
+    font-size: 14px;
+    opacity: 0;
+    transition: all .2s;
+    display: none;
+}
+.tooltip_mark:hover + .tooltip{
+    opacity: 1;
+    display: block;
 }
