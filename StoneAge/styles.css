@@ -45,6 +45,7 @@ button:hover {
     flex-direction: row;
     align-content: center;
     justify-content: space-evenly;
+    gap: 56px;
 }
 
 .status_box{
@@ -104,6 +105,9 @@ button:hover {
     flex-wrap: wrap;
     gap: 8px;
 }
+.item_box input{
+    width: 50%;
+}
 .item_box > div{
     width: 30%;
     text-align: center;
@@ -126,7 +130,7 @@ button:hover {
     gap: 8px;
 }
 .item_status div input{
-    width: 52%;
+    width: 40%;
 }
 .item_name{
     text-align: center;
@@ -193,4 +197,21 @@ button:hover {
 }
 .save:hover{
     background: #559520;
+}
+
+@media screen and (max-width: 1024px){
+    .main{
+        flex-direction: column;
+        align-items: center;
+        gap: 56px;
+    }
+    .status_point_box input{
+        width: 70%;
+    }
+    .status_box{
+        max-width: 80%;
+    } 
+    .item{
+        max-width: 80%;
+    }
 }
