@@ -215,3 +215,19 @@ button:hover {
         max-width: 80%;
     }
 }
+@media screen and (max-width: 1024px){
+    .status_point_box div div{
+        flex-direction: column;
+        gap: 0;
+    }
+    input{
+        margin-top: 5px;
+    }
+    .item_status{
+        flex-wrap: wrap;
+    }
+    .item_status div{
+        gap: 4px;
+    }
+
+}
