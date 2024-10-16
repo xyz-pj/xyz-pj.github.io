@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>능력치 계산기</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="status_box">
+            <div class="box_title">
+                <h2>PLAYER STATUS</h2>
+                <h3>닉네임</h3>
+            </div>
+
+            <div class="display">
+
+            <div class="status_display">
+                <div>
+                    <span>내구력:</span>
+                    <span id="finalhp"></span>
+                    (<span id="hp"></span>)
+                </div>
+
+                <div>
+                    <span>공격력:</span>
+                    <span id="finalatk"></span>
+                    (<span id="atk"></span>)
+                </div>
+                <div>
+                    <span>방어력:</span>
+                    <span id="finaldef"></span>
+                    (<span id="def"></span>)
+                </div>
+                <div>
+                    <span>순발력:</span>
+                    <span id="finalagi"></span>
+                    (<span id="agi"></span>)
+                </div>
+
+            </div>
+
+            <div class="besides">
+                <div class="picture">
+                    <img src="./img/picture.gif" alt="">
+                </div>
+
+            </div>
+
+
+            </div>
+
+            <div class="status_point_box">
+                <div>
+                    <div>
+                        <label for="hpPoint">체력:</label>
+                        <input type="number" id="hpPoint" placeholder="체력 값을 입력하세요">
+                    </div>
+                    <div>
+                        <label for="defPoint">건강:</label>
+                        <input type="number" id="defPoint" placeholder="건강 값을 입력하세요">
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label for="atkPoint">완력:</label>
+                        <input type="number" id="atkPoint" placeholder="완력 값을 입력하세요">
+                    </div>
+
+                    <div>
+                        <label for="agiPoint">순발:</label>
+                        <input type="number" id="agiPoint" placeholder="순발력 값을 입력하세요">
+                    </div>
+                </div>
+                
+            </div>
+
+            <button onclick="calculateStats()">능력치 계산</button>
+
+
+        </div>
+        
+        <div class="item">
+            <div class="box_title">
+                <h2>ITEM EQUIPMENT</h2>
+            </div>
+            <div class="item_box">
+                <div>
+                    <h3>장신구 1</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="accHpLeft">내</label>
+                            <input type="" id="accHpLeft" placeholder="">
+                        </div>
+                        <div>
+                            <label for="accAtkLeft">공</label>
+                            <input type="" id="accAtkLeft" placeholder="">
+                        </div>
+                        <div>
+                            <label for="accDefLeft">방</label>
+                            <input type="" id="accDefLeft" placeholder="">
+                        </div>
+                        <div>
+                            <label for="accAgiLeft">순</label>
+                            <input type="" id="accaAiLeft" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>투구</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="headHp">내</label>
+                            <input type="" id="headHp" placeholder="">
+                        </div>
+                        <div>
+                            <label for="headAtk">공</label>
+                            <input type="" id="headAtk" placeholder="">
+                        </div>
+                        <div>
+                            <label for="headDef">방</label>
+                            <input type="" id="headDef" placeholder="">
+                        </div>
+                        <div>
+                            <label for="headAgi">순</label>
+                            <input type="" id="headAgi" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>장신구 2</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="accHpRight">내</label>
+                            <input type="" id="accHpRight" placeholder="">
+                        </div>
+                        <div>
+                            <label for="accAtkRight">공</label>
+                            <input type="" id="accAtkRight" placeholder="">
+                        </div>
+                        <div>
+                            <label for="accDefRight">방</label>
+                            <input type="" id="accDefRight" placeholder="">
+                        </div>
+                        <div>
+                            <label for="accAgiRight">순</label>
+                            <input type="" id="accAgiRight" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>무기</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="wpnHp">내</label>
+                            <input type="" id="wpnHp" placeholder="">
+                        </div>
+                        <div>
+                            <label for="wpnAtk">공</label>
+                            <input type="" id="wpnAtk" placeholder="">
+                        </div>
+                        <div>
+                            <label for="wpnDef">방</label>
+                            <input type="" id="wpnDef" placeholder="">
+                        </div>
+                        <div>
+                            <label for="wpnAgi">순</label>
+                            <input type="" id="wpnAgi" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>방어구</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="amHp">내</label>
+                            <input type="" id="amHp" placeholder="">
+                        </div>
+                        <div>
+                            <label for="amAtk">공</label>
+                            <input type="" id="amAtk" placeholder="">
+                        </div>
+                        <div>
+                            <label for="amDef">방</label>
+                            <input type="" id="amDef" placeholder="">
+                        </div>
+                        <div>
+                            <label for="amAgi">순</label>
+                            <input type="" id="amAgi" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>보조무기</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="axyHp">내</label>
+                            <input type="" id="axyHp" placeholder="">
+                        </div>
+                        <div>
+                            <label for="axyAtk">공</label>
+                            <input type="" id="axyAtk" placeholder="">
+                        </div>
+                        <div>
+                            <label for="axyDef">방</label>
+                            <input type="" id="axyDef" placeholder="">
+                        </div>
+                        <div>
+                            <label for="axyAgi">순</label>
+                            <input type="" id="axyAgi" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>장갑</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="handHp">내</label>
+                            <input type="" id="handHp" placeholder="">
+                        </div>
+                        <div>
+                            <label for="handAtk">공</label>
+                            <input type="" id="handAtk" placeholder="">
+                        </div>
+                        <div>
+                            <label for="handDef">방</label>
+                            <input type="" id="handDef" placeholder="">
+                        </div>
+                        <div>
+                            <label for="handAgi">순</label>
+                            <input type="" id="handAgi" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>신발</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="footHp">내</label>
+                            <input type="" id="footHp" placeholder="">
+                        </div>
+                        <div>
+                            <label for="footAtk">공</label>
+                            <input type="" id="footAtk" placeholder="">
+                        </div>
+                        <div>
+                            <label for="footDef">방</label>
+                            <input type="" id="footDef" placeholder="">
+                        </div>
+                        <div>
+                            <label for="footAgi">순</label>
+                            <input type="" id="footAgi" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>비고</h3>
+                    <div class="item_status">
+                        <div>
+                            <label for="emptyHp">내</label>
+                            <input type="" id="emptyHp" placeholder="">
+                        </div>
+                        <div>
+                            <label for="emptyAtk">공</label>
+                            <input type="" id="emptyAtk" placeholder="">
+                        </div>
+                        <div>
+                            <label for="emptyDef">방</label>
+                            <input type="" id="emptyDef" placeholder="">
+                        </div>
+                        <div>
+                            <label for="emptyAgi">순</label>
+                            <input type="" id="emptyAgi" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="calculateStats()">능력치 계산</button>
+            
+        </div>
+
+
+    </div>
+    
+    <div class="container" style="display: none;">
+        <h1>능력치 계산기</h1>
+        
+        
+        
+        
+        <div class="result">
+            <h3>계산 결과:</h3>
+            <p id="공격력">공격력: </p>
+            <p id="방어력">방어력: </p>
+            <p id="내구력">내구력: </p>
+            <p id="스피드">스피드: </p>
+        </div>
+    </div>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
