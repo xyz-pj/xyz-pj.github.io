@@ -11,6 +11,7 @@ function calculateStats() {
     let durability = hp * 4 + def + atk + agi;
     let speed = agi;
 
+
     // Display results
     document.getElementById('atk').innerText = offensive;
     document.getElementById('def').innerText = defensive;
@@ -73,16 +74,34 @@ function calculateStats() {
 
     const itemAgi = accAgiLeft + headAgi + accAgiRight + wpnAgi + amAgi + axyAgi + handAgi + footAgi + emptyAgi;
 
-    
-
+    // Final Status    
+    const finalatk = offensive + itemAtk;
+    const finaldef = defensive + itemDef;
+    const finalhp = durability  + itemHp;
+    const finalagi = speed + itemAgi;
 
 
     // Display results
-    document.getElementById('finalatk').innerText = offensive + itemAtk;
-    document.getElementById('finaldef').innerText = defensive + itemDef;
-    document.getElementById('finalhp').innerText = durability  + itemHp;
-    document.getElementById('finalagi').innerText = speed + itemAgi;
+    document.getElementById('finalatk').innerText = finalatk
+    document.getElementById('finaldef').innerText = finaldef
+    document.getElementById('finalhp').innerText = finalhp
+    document.getElementById('finalagi').innerText = finalagi
 
+
+    // Riding
+    const petAtk = parseInt(document.getElementById('petAtk').value) || 0;
+    const petDef = parseInt(document.getElementById('petDef').value) || 0;
+    const petAgi = parseInt(document.getElementById('petAgi').value) || 0;
+
+    const finalRidingatk = (offensive * 0.7) + (petAtk * 0.7) + finalatk;
+    const finalRidingdef = (defensive * 0.7) + (petDef * 0.7) + finaldef;
+    const finalRidingagi = (speed * 0.2) + (petAgi * 0.8) + finalagi;
+
+
+    document.getElementById('finalRidingatk').innerText = finalRidingatk;
+    document.getElementById('finalRidingdef').innerText = finalRidingdef;
+    document.getElementById('finalRidingagi').innerText = finalRidingagi;
+    
 
 }
 

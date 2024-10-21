@@ -146,6 +146,13 @@ button:hover {
 .statusNum{
     color: aquamarine;
 }
+.ridingNum{
+    color: #D1180B;
+}
+.small_text{
+    display: block;
+    text-align: center;
+}
 .status_display{
     display: flex;
     flex-direction: column;
