@@ -46,6 +46,7 @@ button:hover {
     align-content: center;
     justify-content: space-evenly;
     gap: 56px;
+    margin: 56px;
 }
 
 .status_box{
@@ -198,6 +199,28 @@ button:hover {
 .save:hover{
     background: #559520;
 }
+.pet_status{
+    width: 100%;
+    max-width: 600px;
+    padding: 24px;
+    background: #000000CC;
+    background-size: 100%;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pet_status div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
 
 @media screen and (max-width: 1024px){
     .main{
@@ -215,7 +238,10 @@ button:hover {
         max-width: 80%;
     }
 }
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 768px){
+    .main{
+        margin: 12px;
+    }
     .status_point_box div div{
         flex-direction: column;
         gap: 0;
@@ -229,5 +255,10 @@ button:hover {
     .item_status div{
         gap: 4px;
     }
-
+    .tooltip_mark{
+        display: none;
+    }
+    .status_box{
+        
+    }
 }
