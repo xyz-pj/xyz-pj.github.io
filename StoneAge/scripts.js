@@ -93,9 +93,9 @@ function calculateStats() {
     const petDef = parseInt(document.getElementById('petDef').value) || 0;
     const petAgi = parseInt(document.getElementById('petAgi').value) || 0;
 
-    const finalRidingatk = (offensive * 0.7) + (petAtk * 0.7) + finalatk;
-    const finalRidingdef = (defensive * 0.7) + (petDef * 0.7) + finaldef;
-    const finalRidingagi = (speed * 0.2) + (petAgi * 0.8) + finalagi;
+    const finalRidingatk = (offensive * 0.7) + (petAtk * 0.7) + itemAtk;
+    const finalRidingdef = (defensive * 0.7) + (petDef * 0.7) + itemDef;
+    const finalRidingagi = (speed * 0.2) + (petAgi * 0.8) + itemAgi;
 
 
     document.getElementById('finalRidingatk').innerText = finalRidingatk;
