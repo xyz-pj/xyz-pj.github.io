@@ -32,8 +32,13 @@ function calculateStats() {
     const handHp = parseInt(document.getElementById('handHp').value) || 0;
     const footHp = parseInt(document.getElementById('footHp').value) || 0;
     const emptyHp = parseInt(document.getElementById('emptyHp').value) || 0;
-
-    const itemHp = accHpLeft + headHp + accHpRight + wpnHp + amHp + axyHp + handHp + footHp + emptyHp;
+    const emptyHp2 = parseInt(document.getElementById('emptyHp2').value) || 0;
+    const dollHp = parseInt(document.getElementById('dollHp').value) || 0;
+    const emptyHp3 = parseInt(document.getElementById('emptyHp3').value) || 0;
+    const titleHp = parseInt(document.getElementById('titleHp').value) || 0;
+    const seteffHp = parseInt(document.getElementById('seteffHp').value) || 0;
+    
+    const itemHp = accHpLeft + headHp + accHpRight + wpnHp + amHp + axyHp + handHp + footHp + emptyHp + emptyHp2 + dollHp + emptyHp3 + titleHp + seteffHp;
     
     // Item Atk
     const accAtkLeft = parseInt(document.getElementById('accAtkLeft').value) || 0;
@@ -45,8 +50,13 @@ function calculateStats() {
     const handAtk = parseInt(document.getElementById('handAtk').value) || 0;
     const footAtk = parseInt(document.getElementById('footAtk').value) || 0;
     const emptyAtk = parseInt(document.getElementById('emptyAtk').value) || 0;
+    const emptyAtk2 = parseInt(document.getElementById('emptyAtk2').value) || 0;
+    const dollAtk = parseInt(document.getElementById('dollAtk').value) || 0;
+    const emptyAtk3 = parseInt(document.getElementById('emptyAtk3').value) || 0;
+    const titleAtk = parseInt(document.getElementById('titleAtk').value) || 0;
+    const seteffAtk = parseInt(document.getElementById('seteffAtk').value) || 0;
 
-    const itemAtk = accAtkLeft + headAtk + accAtkRight + wpnAtk + amAtk + axyAtk + handAtk + footAtk + emptyAtk;
+    const itemAtk = accAtkLeft + headAtk + accAtkRight + wpnAtk + amAtk + axyAtk + handAtk + footAtk + emptyAtk + emptyAtk2 + dollAtk + emptyAtk3 + titleAtk + seteffAtk;
     
     // Item Def
     const accDefLeft = parseInt(document.getElementById('accDefLeft').value) || 0;
@@ -58,8 +68,13 @@ function calculateStats() {
     const handDef = parseInt(document.getElementById('handDef').value) || 0;
     const footDef = parseInt(document.getElementById('footDef').value) || 0;
     const emptyDef = parseInt(document.getElementById('emptyDef').value) || 0;
+    const emptyDef2 = parseInt(document.getElementById('emptyDef2').value) || 0;
+    const dollDef = parseInt(document.getElementById('dollDef').value) || 0;
+    const emptyDef3 = parseInt(document.getElementById('emptyDef3').value) || 0;
+    const titleDef = parseInt(document.getElementById('titleDef').value) || 0;
+    const seteffDef = parseInt(document.getElementById('seteffDef').value) || 0;
 
-    const itemDef = accDefLeft + headDef + accDefRight + wpnDef + amDef + axyDef + handDef + footDef + emptyDef;
+    const itemDef = accDefLeft + headDef + accDefRight + wpnDef + amDef + axyDef + handDef + footDef + emptyDef + emptyDef2 + dollDef + emptyDef3 + titleDef + seteffDef;
     
     // Item Agi
     const accAgiLeft = parseInt(document.getElementById('accAgiLeft').value) || 0;
@@ -71,8 +86,13 @@ function calculateStats() {
     const handAgi = parseInt(document.getElementById('handAgi').value) || 0;
     const footAgi = parseInt(document.getElementById('footAgi').value) || 0;
     const emptyAgi = parseInt(document.getElementById('emptyAgi').value) || 0;
-
-    const itemAgi = accAgiLeft + headAgi + accAgiRight + wpnAgi + amAgi + axyAgi + handAgi + footAgi + emptyAgi;
+    const emptyAgi2 = parseInt(document.getElementById('emptyAgi2').value) || 0;
+    const dollAgi = parseInt(document.getElementById('dollAgi').value) || 0;
+    const emptyAgi3 = parseInt(document.getElementById('emptyAgi3').value) || 0;
+    const titleAgi = parseInt(document.getElementById('titleAgi').value) || 0;
+    const seteffAgi = parseInt(document.getElementById('seteffAgi').value) || 0;
+    
+    const itemAgi = accAgiLeft + headAgi + accAgiRight + wpnAgi + amAgi + axyAgi + handAgi + footAgi + emptyAgi + emptyAgi2 + dollAgi + emptyAgi3 + titleAgi + seteffAgi;
 
     // Final Status    
     const finalatk = offensive + itemAtk;
@@ -94,7 +114,7 @@ function calculateStats() {
     const petAgi = parseInt(document.getElementById('petAgi').value) || 0;
 
     const finalRidingatk = Math.floor((offensive * 0.7) + (petAtk * 0.7) + itemAtk);
-    const finalRidingdef = Math.floor((defensive * 0.7) + (petDef * 0.7) + itemDef);
+    const finalRidingdef = Math.floor((defensive * 0.6) + (petDef * 0.6) + itemDef);
     const finalRidingagi = Math.floor((speed * 0.2) + (petAgi * 0.8) + itemAgi);
 
     document.getElementById('finalRidingatk').innerText = finalRidingatk;
@@ -160,7 +180,42 @@ function saveData() {
             handName: document.getElementById('handName').value,
             footName: document.getElementById('footName').value,
             emptyName: document.getElementById('emptyName').value,
-            emptyName: document.getElementById('emptyName').value
+            emptyName: document.getElementById('emptyName').value,
+
+            petName: document.getElementById('petName').value,
+            petAtk: document.getElementById('petAtk').value,
+            petDef: document.getElementById('petDef').value,
+            petAgi: document.getElementById('petAgi').value,
+
+            emptyName2: document.getElementById('emptyName2').value,
+            emptyHp2: document.getElementById('emptyHp2').value,
+            emptyAtk2: document.getElementById('emptyAtk2').value,
+            emptyDef2: document.getElementById('emptyDef2').value,
+            emptyAgi2: document.getElementById('emptyAgi2').value,
+
+            dollName: document.getElementById('dollName').value,
+            dollHp: document.getElementById('dollHp').value,
+            dollAtk: document.getElementById('dollAtk').value,
+            dollDef: document.getElementById('dollDef').value,
+            dollAgi: document.getElementById('dollAgi').value,
+
+            emptyName3: document.getElementById('emptyName3').value,
+            emptyHp3: document.getElementById('emptyHp3').value,
+            emptyAtk3: document.getElementById('emptyAtk3').value,
+            emptyDef3: document.getElementById('emptyDef3').value,
+            emptyAgi3: document.getElementById('emptyAgi3').value,
+
+            titleName: document.getElementById('titleName').value,
+            titleHp: document.getElementById('titleHp').value,
+            titleAtk: document.getElementById('titleAtk').value,
+            titleDef: document.getElementById('titleDef').value,
+            titleAgi: document.getElementById('titleAgi').value,
+
+            seteffName: document.getElementById('seteffName').value,
+            seteffHp: document.getElementById('seteffHp').value,
+            seteffAtk: document.getElementById('seteffAtk').value,
+            seteffDef: document.getElementById('seteffDef').value,
+            seteffAgi: document.getElementById('seteffAgi').value
 
 
         };
@@ -230,6 +285,41 @@ function loadData() {
             document.getElementById('handName').value = data.handName || '장갑';
             document.getElementById('footName').value = data.footName || '신발';
             document.getElementById('emptyName').value = data.emptyName || '비고';
+
+            document.getElementById('petName').value = data.petName || '펫 이름';
+            document.getElementById('petAtk').value = data.petAtk || 0;
+            document.getElementById('petDef').value = data.petDef || 0;
+            document.getElementById('petAgi').value = data.petAgi || 0;
+
+            document.getElementById('emptyName2').value = data.emptyName2 || '비고2';
+            document.getElementById('emptyHp2').value = data.emptyHp2 || 0;
+            document.getElementById('emptyAtk2').value = data.emptyAtk2 || 0;
+            document.getElementById('emptyDef2').value = data.emptyDef2 || 0;
+            document.getElementById('emptyAgi2').value = data.emptyAgi2 || 0;
+
+            document.getElementById('dollName').value = data.dollName || '펫 인형';
+            document.getElementById('dollHp').value = data.dollHp || 0;
+            document.getElementById('dollAtk').value = data.dollAtk || 0;
+            document.getElementById('dollDef').value = data.dollDef || 0;
+            document.getElementById('dollAgi').value = data.dollAgi || 0;
+
+            document.getElementById('emptyName3').value = data.emptyName3 || '비고3';
+            document.getElementById('emptyHp3').value = data.emptyHp3 || 0;
+            document.getElementById('emptyAtk3').value = data.emptyAtk3 || 0;
+            document.getElementById('emptyDef3').value = data.emptyDef3 || 0;
+            document.getElementById('emptyAgi3').value = data.emptyAgi3 || 0;
+
+            document.getElementById('titleName').value = data.titleName || '칭호';
+            document.getElementById('titleHp').value = data.titleHp || 0;
+            document.getElementById('titleAtk').value = data.titleAtk || 0;
+            document.getElementById('titleDef').value = data.titleDef || 0;
+            document.getElementById('titleAgi').value = data.titleAgi || 0;
+
+            document.getElementById('seteffName').value = data.seteffName || '세트효과';
+            document.getElementById('seteffHp').value = data.seteffHp || 0;
+            document.getElementById('seteffAtk').value = data.seteffAtk || 0;
+            document.getElementById('seteffDef').value = data.seteffDef || 0;
+            document.getElementById('seteffAgi').value = data.seteffAgi || 0;
 
             alert("로드 완료!");
         } else {

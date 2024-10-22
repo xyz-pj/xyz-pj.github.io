@@ -228,6 +228,18 @@ button:hover {
     align-items: center;
     gap: 8px;
 }
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 1024px){
     .main{
